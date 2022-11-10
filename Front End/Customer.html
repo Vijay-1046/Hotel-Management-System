@@ -1,0 +1,76 @@
+<!DOCTYsPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CUSTOMER FORM</title>
+   <style type="text/css">
+    body{
+      background-image: url(hotelcustomer.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      height: 100%;
+
+    }
+     
+   </style>
+</head>
+<body >
+
+ <center>
+
+  <h1> CUSTOMER DETAILS</h1>
+<br>
+<form action='#' th:action="@{/customer/save}" th:object="${customer}" method="post"></form>
+<form action="Customer" class="was-validated">
+
+  
+  <div class="mb-3 mt-3">
+    <label for="uid" class="form-label"> Customer Id:</label>
+    <input type="num" th:field="*{customerId}" class="form-control" id="uid" name="uid" required>
+  </div>
+  <br>
+
+  
+   <div class="mb-3 mt-3">
+    <label for="uname" class="form-label">Fisrt Name:</label>
+    <input type="text"  th:field="*{first name}" class="form-control" id="uname" name="uname" required>
+  </div>
+
+  <br>
+
+  
+  <div class="mb-3 mt-3">
+    <label for="uname" class="form-label">Last Name:</label>
+    <input type="text" th:field="*{last name}"class= form-control" id="uname" name="uname" required>
+  </div>
+
+  <br>
+
+  
+   <div class="mb-3 mt-3">
+    <label for="phone" class="form-label">Phone Number:</label>
+    <input type="text" th:field="*{phonenumber}" class="form-control" id="phone" name="phone" required>
+  </div>
+  <br>
+
+
+      <div class="mb-3 mt-3">
+    <label for="address" class="form-label">address:</label>
+    <input type="text" th:field="*{address}" class="form-control" id="address" name="address" required>
+  </div>
+  <br>
+
+  <h2></div>
+  <button type="submit" class="btn btn-primary" >Submit</button></h2>
+  <br>
+
+</form>
+</center>
+
+</form>
+
+
+</body>
+</html>

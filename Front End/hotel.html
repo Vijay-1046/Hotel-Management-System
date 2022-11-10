@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CUSTOMER FORM</title>
+   <style type="text/css">
+    body{
+      background-image: url(hoteldets.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      height: 100%;
+
+    }
+     
+   </style>
+</head>
+<body >
+
+ <center>
+
+  <h1> HOTEL DETAILS</h1>
+<br>
+<form action='#' th:action="@{/hotel/save}" th:object="${hotel}" method="post"></form>
+<form action="hotel" class="was-validated">
+
+
+  <div class="mb-3 mt-3">
+    <label for="uid" class="form-label"> Customer Id:</label>
+    <input type="num" th:field="*{customerId}" class="form-control" id="uid" name="uid" required>
+  </div><br>
+  
+
+  <div class="mb-3 mt-3">
+    <label for="uname" class="form-label"> Name:</label>
+    <input type="text" th:field="*{name}" class="form-control" id="uname" name="uname" required>
+  </div><br>
+
+
+   <div class="mb-3 mt-3">
+    <label for="udescription" class="form-label">Description:</label>
+    <input type="text" th:field="*{description}" class="form-control" id="udescription" name="udescription" required>
+  </div><br>
+
+  <div class="mb-3 mt-3">
+    <label for="uroom capacity" class="form-label">Room Capacity:</label>
+    <input type="text" th:field="uroom capacity" class="form-control" id="uroom capacity" name="uroom capacity" required>
+  </div><br>
+
+   <div class="mb-3 mt-3">
+    <label for="urent" class="form-label">Rent:</label>
+    <input type="text" th:field="urent" class="form-control" id="urent" name="urent" required>
+  </div><br>
+
+   <div class="mb-3 mt-3">
+    <label for="uneeded room" class="form-label">Needed Rooms:</label>
+    <input type="text" th:field="*{uneeded room}" class="form-control" id="uneeded room" name="uneeded room" required>
+  </div><br>
+
+  <div class="mb-3 mt-3">
+    <label for="uroom types" class="form-label">Room Types:</label>
+    <input type="text" th:field="uroom types" class="form-control" id="uroom types" name="uroom types" required>
+  </div><br>
+
+  <div class="mb-3 mt-3">
+    <label for="ucategory" class="form-label">Category:</label>
+    <input type="text" th:field="ucategory" class="form-control" id="ucategory" name="ucategory" required>
+  </div><br>
+
+  </div>
+  <button type="submit" class="btn btn-primary" >Submit</button>
+
+</form>
+</center>
+
+</form>
+
+
+</body>
+</html>

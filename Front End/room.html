@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ROOM FORM</title>
+   <style type="text/css">
+    body{
+      background-image: url(room.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: right top;
+      height: 100%;
+
+    }
+     
+   </style>
+</head>
+<body >
+
+ <center>
+ 
+
+
+  <h1>ROOM DETAILS</h1>
+<br>
+<form action='#' th:action="@{/room/save}" th:object="${room}" method="post"></form>
+<form action="room" class="was-validated">
+  <div class="mb-3 mt-3">
+    <label for="uroom" class="form-label"> Room Id:</label>
+    <input type="num" th:field="*{roomId}" class="form-control" id="urooom" name="uroom" required>
+  </div>
+
+  <br>
+
+   <div class="mb-3 mt-3">
+    <label for="unumber" class="form-label">Number:</label>
+    <input type="unumber" th:field="*{number}" class="form-control" id="unumber" name="unumber" required>
+  </div>
+
+  <br>
+
+   <div class="mb-3 mt-3">
+    <label for="uprice" class="form-label">Price:</label>
+    <input type="number" th:field="*{price}" class="form-control" id="price" name="uprice" required>
+  </div>
+
+  <br>
+ 
+
+      <div class="mb-3 mt-3">
+    <label for="total price" class="form-label">Total Price:</label>
+    <input type="text" th:field="*{totalprice}" class="form-control" id="totalprice" name="totalprice" required>
+  </div><br>
+
+  <div class="mb-3 mt-3">
+    <label for="roomtype" class="form-label">Room Type:</label>
+    <input type="text" th:field="*{roomtype}" class="form-control" id="roomtype" name="roomtype" required>
+  </div><br>
+
+  </div>
+
+   <div class="mb-3 mt-3">
+    <label for="reservation" class="form-label">Reservation:</label>
+    <input type="text" th:field="*{reservation}" class="form-control" id="reservation" name="reservation" required>
+  </div><br>
+  <button type="submit" class="btn btn-primary" >Submit</button>
+
+</form>
+</center>
+
+</form>
+
+
+</body>
+</html>
